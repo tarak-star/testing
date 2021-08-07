@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{%extends 'testapp/base.html'%}
+<h1>update form</h1>
+{%block body_block%}
+
+<form  method="post">
+  {%csrf_token%}
+  <p>Employee name : <input type="text" name="ename" value="{{employee.ename}}"> </p>
+  <p>Employee Mobile number : <input type="text" name="emn" value="{{employee.emn}}"> </p>
+  <p>Employee Designation: <input type="text" name="edegn" value="{{employee.edegn}}"></p>
+  <p>Employee Department : <input type="text" name="edept" value="{{employee.edept}}"></p>
+  <p>Employee mandal : <input type="text" name="emandal" value="{{employee.emandal}}"></p>
+  <input type="submit" class="btn btn-primary"  value="updated">
+  
+</form>
+{%endblock%}

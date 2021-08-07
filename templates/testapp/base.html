@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>  </title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static "css/emp.css" %}">
+    <style>
+    body {
+      background-color: yellow;
+    }
+    h1{
+      text-align: center;
+    }
+</style>
+<h1>APSHCL :: SRIKAKULAM DISTRICT</h1>
+  </head>
+  <body>
+
+    <nav class=" navbar navbar-expand-lg navbar-light bg-light">
+      <a class="nav-link active" aria-current="page" href="#">RAMU</a>
+
+        <a class="nav-link" href="/">ALL</a>
+          <a class="nav-link" href="/createpr">PR</a>
+            <a class="nav-link" href="/createrws">RWS</a>
+            <a class="nav-link" href="/createap">APSHCL</a>
+
+
+      <a class="nav-link" href="#">Contact</a>
+      <a class="nav-link" href="#">Admin</a>
+      <a class="nav-link" href="/accounts/login">Login</a>
+      <a class="nav-link" href="/accounts/logout">Logout</a>
+    </nav>
+    <form  method="post">
+      <div class="container" align="center">
+        {%block body_block%}
+
+        {%endblock%}
+
+      </div>
+
+    </form>
+
+  </body>
+</html>

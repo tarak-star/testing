@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{%extends 'testapp/base.html'%}
+
+{%block body_block%}
+
+<h1>Employees MObile Numbers</h1>
+<br>
+<!--
+<select name="ramu">
+  <option selected="selected" disabled>Objects on page:</option>
+  <option value="apshcl">APSHCL</option>
+  <option value="rws">RWS</option>
+  <option value="pr">PR</option>
+</select>
+-->
+<br>
+
+  
+
+    <table border="2">
+      <thead>
+        <th>Employee Name</th>
+        <th>MObile number</th>
+        <th>Designation</th>
+        <th>Department</th>
+        <th>Mandal name</th>
+        <th>Actions</th>
+      </thead>
+
+      {%for emp in empmobnumber %}
+      <tr>
+        <td>{{emp.ename}}</td>
+        <td>{{emp.emn}}</td>
+        <td>{{emp.edegn}}</td>
+        <td>{{emp.edept}}</td>
+        <td>{{emp.emandal}}</td>
+        <td><a href="/update/{{emp.id}}">Update</a> <a href="/delete/{{emp.id}}">Delete</a></td>
+      </tr>
+    {%endfor%}
+    </table>
+    <br>
+  <a href="/insert" class="btn btn-primary btn-success btn-lg">Do you want Insert new record</a>
+
+  </form>
+  {% include 'testapp/pagination.html' with page=empmobnumber%}
+{%endblock%}
